@@ -43,12 +43,20 @@ function executePush() {
 }
 
 function executePop() {
-  $result.innerText = 'pop: ' + stack.pop()
+  try {
+    $result.innerText = 'pop: ' + stack.pop()
+  } catch (err) {
+    $result.innerText = 'Erro: ' + err.message
+  }
   renderizeStack()
 }
 
 function executePeek() {
-  $result.innerText = 'peek: ' + stack.peek()
+  try {
+    $result.innerText = 'peek: ' + stack.peek()
+  } catch (err) {
+    $result.innerText = 'Erro: ' + err.message
+  }
   renderizeStack()
 }
 
