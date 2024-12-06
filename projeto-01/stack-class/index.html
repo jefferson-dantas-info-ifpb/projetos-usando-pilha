@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto 01</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <div
+      class="bg-slate-300 container max-w-[60rem] mx-auto my-10 rounded-lg p-6 shadow-md"
+    >
+      <h1 class="text-xl font-bold mb-5">
+        Projeto 01 - Operações de Pilha na Página Web
+      </h1>
+
+      <h2 class="text-md font-bold mt-4 mb-2">Pilha</h2>
+
+      <div id="stack" class="flex flex-wrap gap-2"></div>
+
+      <h2 class="text-md font-bold mt-4 mb-2">Ações</h2>
+
+      <section class="my-4">
+        <label for="value" class="block">Digite um número</label>
+        <input
+          type="number"
+          class="w-96 p-2 rounded-md shadow-md"
+          id="value"
+          placeholder="Digite..."
+        />
+      </section>
+
+      <button
+        id="push-action"
+        class="bg-slate-600 hover:bg-slate-500 active:bg-slate-400 text-white px-4 py-2 rounded-md shadow-md"
+      >
+        push
+      </button>
+
+      <button
+        id="pop-action"
+        class="bg-slate-600 hover:bg-slate-500 active:bg-slate-400 text-white px-4 py-2 rounded-md shadow-md"
+      >
+        pop
+      </button>
+
+      <button
+        id="peek-action"
+        class="bg-slate-600 hover:bg-slate-500 active:bg-slate-400 text-white px-4 py-2 rounded-md shadow-md"
+      >
+        peek
+      </button>
+
+      <button
+        id="isEmpty-action"
+        class="bg-slate-600 hover:bg-slate-500 active:bg-slate-400 text-white px-4 py-2 rounded-md shadow-md"
+      >
+        isEmpty
+      </button>
+
+      <button
+        id="size-action"
+        class="bg-slate-600 hover:bg-slate-500 active:bg-slate-400 text-white px-4 py-2 rounded-md shadow-md"
+      >
+        size
+      </button>
+
+      <section class="my-4">
+        <div>Resultado</div>
+        <div id="result" class="w-96 p-2 rounded-md shadow-sm bg-white">
+          -----
+        </div>
+      </section>
+    </div>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
