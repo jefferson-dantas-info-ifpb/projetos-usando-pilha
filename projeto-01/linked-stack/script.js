@@ -35,12 +35,18 @@ function renderizeStack() {
     $stack.appendChild($item)
     top = top.proximo
   }
+
+  $value.focus()
 }
 
 function executePush() {
+  if ($value.value.trim() === '') {
+    return
+  }
   stack.push(+$value.value)
   $result.innerText = 'push: ' + +$value.value
   renderizeStack()
+  $value.value = ''
 }
 
 function executePop() {

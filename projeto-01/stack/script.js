@@ -32,12 +32,18 @@ function renderizeStack() {
     $item.innerText = item
     $stack.appendChild($item)
   }
+
+  $value.focus()
 }
 
 function executePush() {
+  if ($value.value.trim() === '') {
+    return
+  }
   stack.push(+$value.value)
   $result.innerText = 'push: ' + +$value.value
   renderizeStack()
+  $value.value = ''
 }
 
 function executePop() {
